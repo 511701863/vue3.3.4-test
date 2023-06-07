@@ -1,0 +1,116 @@
+// 悬浮弹出层样式
+.v-binder-follower-content{
+  .n-dropdown-menu, .n-base-select-menu{
+    background-color: #19262e;
+    >div{
+      div{
+        color: #fff;
+      }
+    }
+  }
+}
+// toolltip悬浮框
+.v-binder-follower-container{
+  width: 30%;
+}
+
+// menu
+.n-menu{
+  .n-menu-item-content.n-menu-item-content--selected::before{
+    background-color: transparent!important;
+  }
+  .n-menu-item-content,.n-menu-item-content--collapsed{
+    padding: 0 10px!important;
+  }
+  .n-submenu .n-submenu-children{
+    margin-left: 30px;
+  }
+}
+
+// pagination
+.n-pagination{
+  .n-base-selection .n-base-selection-label{
+    background-color: transparent!important;
+    .n-base-selection-input__content{
+      color: #fff;
+    }
+  }
+  .n-pagination-item{
+    border: none!important;
+    color: #fff!important;
+    &.n-pagination-item--active{
+      color: #FFB8B8!important;
+    }
+  }
+}
+
+
+// button default状态
+.n-button--default-type{
+  color: #FFB8B8!important;
+  .n-button__border{
+    border: 1px solid #FFB8B8!important;
+  }
+}
+
+// select
+.n-select{
+  .n-base-selection.n-base-selection--disabled{
+    .n-base-selection-label {
+      background-color: #61737e!important;
+      .n-base-selection-input__content{
+        color: #33463f!important;
+      }
+    }
+  }
+  .n-base-selection__border{
+    border: 1px solid #184e37!important;
+  }
+  .n-base-selection-tags,
+  .n-base-selection-label,
+  .n-base-selection:not(.n-base-selection--disabled).n-base-selection--active .n-base-selection-label,
+  .n-base-selection.n-base-selection--error-status:not(.n-base-selection--disabled).n-base-selection--active .n-base-selection-label,
+  .n-base-selection:not(.n-base-selection--disabled).n-base-selection--active .n-base-selection-tags
+  {
+    background-color: #1f2f39!important;
+    .n-base-selection-input__content{
+      color: #FFB8B8!important;
+    }
+  }
+  .n-base-selection-label{
+    border: 1px solid #FFB8B8!important;
+  }
+  .n-base-selection-tag-wrapper .n-tag{
+    background-color: #1f292f;
+    color: #fff;
+  }
+
+}
+.n-base-selection-tag-wrapper .n-tag{
+  background-color: #1f292f!important;
+}
+
+// cascader
+.n-cascader{
+  .n-base-selection{
+    border: 1px solid #184e37!important;
+    .n-base-selection-label{
+      background-color: #1f2f39;;
+    }
+  }
+  .n-base-selection:not(.n-base-selection--disabled).n-base-selection--active .n-base-selection-label{
+    background-color: #1f2f39;
+  }
+  .n-base-selection.n-base-selection--disabled .n-base-selection-label{
+    background-color: #61737e;
+  }
+}
+
+// data-table
+.n-data-table .n-data-table-th.n-data-table-th--filterable{
+  display: flex;
+  .n-data-table-filter{
+    position: relative;
+  }
+}
+

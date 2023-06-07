@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": [
+      "vite/client",
+      "unplugin-vue-macros/macros-global",
+      "naive-ui/volar"
+    ],
+    "resolveJsonModule": true
+  },
+  "vueCompilerOptions": {
+    "target": 3, // or 2.7 for Vue 2
+    "plugins": [
+      "@vue-macros/volar/define-models",
+      "@vue-macros/volar/define-props",
+      "@vue-macros/volar/define-props-refs",
+      "@vue-macros/volar/short-vmodel",
+      "@vue-macros/volar/export-props"
+    ]
+  },
+  "exclude": [
+    // "src/utils/transformlat.ts"
+  ]
+}

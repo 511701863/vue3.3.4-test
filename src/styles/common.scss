@@ -1,0 +1,54 @@
+// 左侧带竖条的标题
+.nx--title{
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.nx--title::before{
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 16px;
+  background: #FFB8B8;
+  margin-left: 1px;
+  margin-right: 8px;
+}
+
+.nx-text-default{
+  color: #fff;
+}
+// 最多显示3行文字
+.nx-text-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+}
+
+// 最多显示2行文字
+.nx-text-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+
+// 最多显示1行文字
+.nx-hidden-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amap-info-content{
+  background: #1f292f!important;
+  border:1px solid #909ea7!important;
+  color:#909ea7;
+  padding: 5px;
+}

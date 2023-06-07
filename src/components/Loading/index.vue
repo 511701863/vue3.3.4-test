@@ -1,0 +1,59 @@
+<script lang="ts" setup>
+import LoadingIcon from '@/assets/images/loading.png';
+
+interface Props {
+  msg?: any
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  msg: {}
+});
+</script>
+
+<template>
+  <div
+    v-show="msg.show"
+    class="loading"
+  >
+    <div class="load-box">
+      <n-image
+        :src="LoadingIcon"
+        :preview-disabled="true"
+        class="w-40"
+      />
+      <span class="mt-normal text-themeColor">{{ msg.title }}</span>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  .load-box {
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;height: 100%;border-radius: 5px;
+    box-shadow:0px 1px 15px rgba(0,0,0, .5);color: #fff;
+    display: flex;flex-direction: column;align-items: center;
+    justify-content: center;letter-spacing: .8px;
+    font-size: 13px;
+    img{
+      width: 30px;margin-bottom: 8px;
+      -webkit-animation:rotate .8s linear infinite;
+    }
+  }
+}
+
+@keyframes rotate{
+  to{
+    transform: rotate(360deg);
+  }
+}
+</style>
